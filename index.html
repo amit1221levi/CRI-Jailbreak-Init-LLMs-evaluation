@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,7 +112,6 @@
   </section>
 
   <!-- Abstract Section -->
-<!-- Abstract Section -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -153,7 +153,19 @@
     </div>
   </section>
 
-
+  <!-- Refusal Compliance part (vRefusal) Section (Inserted After Abstract) -->
+  <section class="section hero is-white">
+    <div class="container is-max-desktop content has-text-justified">
+      <h2 class="title is-3">Refusal Compliance part (vRefusal)</h2>
+      <p>
+        Alignment training, which labels “good” or “bad” responses, effectively curbs harmful content yet
+        inadvertently enables “Universal jailbreaks attacks.” These gradient-based attacks exploit the
+        “minus refusal” direction—intended to enforce refusals—that overlaps with jailbreak embeddings.
+        This overlap both blocks harmful outputs and ironically guides adversaries around safety measures,
+        illustrating how alignment can expose critical vulnerabilities even as it protects.
+      </p>
+    </div>
+  </section>
 
   <!-- Introduction Section -->
   <section class="section hero is-white">
@@ -184,13 +196,44 @@
     </div>
   </section>
 
-  <!-- New Section: Fast LLM Jailbreak Robustness Test -->
+  <!-- Compliance-Refusal Figure (After Introduction) -->
+  <section class="section hero is-light is-small">
+    <div class="container is-max-desktop">
+      <h2 class="title">Compliance-Refusal Visualization</h2>
+      <figure class="image">
+        <!-- Updated PDF for compliance-refusal figure -->
+        <img src="static/images/harmful_prompt_embeddings_with_attacks (1).pdf" alt="Compliance-Refusal Visualization">
+      </figure>
+      <p class="subtitle has-text-centered" style="margin-top: 1em;">
+        A depiction of the compliance and refusal subspaces exploited by jailbreak attacks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Framework Section with PDF -->
+  <section class="section hero is-white">
+    <div class="container is-max-desktop content has-text-justified">
+      <h2 class="title is-3">Framework</h2>
+      <p>
+        Our proposed CRI framework narrows the search space by initializing the optimization process
+        closer to the compliance subspace of harmful prompts. Below is a high-level overview diagram:
+      </p>
+      <figure class="image">
+        <img src="static/images/Framework.pdf" alt="Framework Overview">
+      </figure>
+      <p class="subtitle has-text-centered" style="margin-top: 1em;">
+        Figure: The CRI framework pipeline for gradient-based jailbreak attacks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fast LLM Jailbreak Section -->
   <section class="section hero is-light">
     <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Fast LLM Jailbreak Robustness Test with GCG + CRI (HarmBench In A Minutes) </h2>
+      <h2 class="title is-3">Fast LLM Jailbreak Robustness Test with GCG + CRI (HarmBench In A Minutes)</h2>
       <p>
         To further demonstrate the effectiveness of CRI, we conducted a <strong>fast LLM jailbreak robustness test</strong>
-        on one of the <strong>DeepSeek</strong> models using the <strong>GCG + CRI </strong> jailbreak attack on the 
+        on one of the <strong>DeepSeek</strong> models using the <strong>GCG + CRI</strong> jailbreak attack on the 
         <strong>HarmBench</strong> benchmark. Below is an overview of how we set up and ran our experiments:
       </p>
       <ol>
@@ -219,16 +262,44 @@
     </div>
   </section>
 
+  <!-- Screenshot after Fast LLM Jailbreak Section -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title">GCG + CRI in Action</h2>
+        <figure class="image">
+          <img src="static/images/Screenshot 2025-02-14 at 1.00.03.png" alt="GCG + CRI Screenshot">
+        </figure>
+        <p class="subtitle has-text-centered" style="margin-top: 1em;">
+          Example screenshot demonstrating the speed and success of CRI-boosted jailbreak.
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Overall Results Section -->
+  <section class="section hero is-white">
+    <div class="container is-max-desktop content has-text-justified">
+      <h2 class="title is-3">Overall Results</h2>
+      <p>
+        We present our overall CRI-boosted jailbreak results, highlighting the improved success rates and
+        reduced convergence steps across multiple benchmarks.
+      </p>
+      <figure class="image">
+        <img src="static/images/Screenshot 2025-02-14 at 1.03.54.png" alt="Overall Results Screenshot">
+      </figure>
+      <p class="subtitle has-text-centered" style="margin-top: 1em;">
+        A comprehensive look at the performance gains achieved with CRI.
+      </p>
+    </div>
+  </section>
 
-
-  <!-- Figure 3: Main Results Visualization -->
+  <!-- (Original) Figure 3: Main Results Visualization -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <h2 class="title">Figure 3: Main Results Visualization</h2>
         <figure class="image">
-          <!-- Replace with your actual path and image -->
           <img src="static/images/harmful_prompt_embeddings_with_attacks.pdf" alt="Comliance-Refusal">
         </figure>
         <p class="subtitle has-text-centered" style="margin-top: 1em;">
@@ -238,13 +309,12 @@
     </div>
   </section>
 
-  <!-- Figure 4: CRI Attack Results -->
+  <!-- (Original) Figure 4: CRI Attack Results -->
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <h2 class="title">Figure 4: CRI Attack Results</h2>
         <figure class="image">
-          <!-- Replace with your actual path and image -->
           <img src="static/images/results_cri.png" alt="Results CRI">
         </figure>
         <p class="subtitle has-text-centered" style="margin-top: 1em;">
@@ -254,8 +324,6 @@
     </div>
   </section>
 
-
-  
   <!-- BibTeX citation (Optional) -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -301,6 +369,4 @@
 
 </body>
 </html>
-
-
-
+```
