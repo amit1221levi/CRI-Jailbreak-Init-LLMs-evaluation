@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Replace the content below with appropriate information -->
+  <!-- Open Graph meta tags (Facebook/LinkedIn) -->
   <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="Enhancing Jailbreak Attacks via Compliance-Refusal-Based Initialization"/>
-  <meta property="og:url" content="URL_OF_YOUR_WEBSITE"/>
-  <!-- Example Open Graph image (1200x630 recommended) -->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:description" content="Demonstration of CRI for gradient-based jailbreak attacks on LLMs."/>
+  <meta property="og:url" content="URL_OF_THE_WEBSITE"/>
+  <meta property="og:image" content="static/images/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-  <!-- Keywords for your paper to be indexed by -->
-  <meta name="keywords" content="jailbreak attacks, large language models, CRI, compliance-refusal, adversarial attacks">
+  <!-- No Twitter meta tags included -->
+
+  <!-- Keywords for indexing -->
+  <meta name="keywords" content="Jailbreak Attacks, Compliance Refusal Initialization, GCG, LLM, CRI, HarmBench">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Enhancing Jailbreak Attacks via Compliance-Refusal-Based Initialization</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <!-- Stylesheets -->
+  <!-- Bulma and custom CSS -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -27,7 +29,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
-  <!-- Scripts -->
+  <!-- JS scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -37,7 +39,7 @@
 </head>
 <body>
 
-  <!-- Title & Authors -->
+  <!-- Hero / Title Section -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -46,76 +48,73 @@
             <h1 class="title is-1 publication-title">
               Enhancing Jailbreak Attacks via Compliance-Refusal-Based Initialization
             </h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
+
+            <!-- Authors -->
+            <div class="is-size-5 publication-authors" style="margin-top: 1.5em;">
               <span class="author-block">
-                Amit Levi<sup>*1</sup>
-                (<a href="mailto:amitlevi@campus.technion.ac.il">amitlevi@campus.technion.ac.il</a>),
+                <a href="mailto:amitlevi@campus.technion.ac.il" target="_blank">Amit Levi</a><sup>*1</sup>
               </span>
               <span class="author-block">
-                Rom Himelstein<sup>*2</sup>
-                (<a href="mailto:romh@campus.technion.ac.il">romh@campus.technion.ac.il</a>),
+                <a href="mailto:romh@campus.technion.ac.il" target="_blank">Rom Himelstein</a><sup>*2</sup>
               </span>
-              <span class="author-block">Yaniv Nemcovsky<sup>1</sup>,</span>
-              <span class="author-block">Avi Mendelson<sup>1</sup>,</span>
-              <span class="author-block">Chaim Baskin<sup>3</sup></span>
+              <span class="author-block">
+                Yaniv Nemcovsky<sup>1</sup>
+              </span>
+              <span class="author-block">
+                Avi Mendelson<sup>1</sup>
+              </span>
+              <span class="author-block">
+                Chaim Baskin<sup>3</sup>
+              </span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <!-- Affiliations -->
+            <div class="is-size-6 publication-authors" style="margin-top: 1em;">
               <p>
-                <strong>*Equal contribution</strong><br>
                 <sup>1</sup>Department of Computer Science, Technion - Israel Institute of Technology<br>
                 <sup>2</sup>Department of Data and Decision Science, Technion - Israel Institute of Technology<br>
                 <sup>3</sup>School of Electrical and Computer Engineering, Ben-Gurion University of the Negev
               </p>
+              <p class="eql-cntrb" style="margin-top: 1em;">
+                <small><sup>*</sup>Indicates Equal Contribution</small>
+              </p>
             </div>
 
-            <!-- Example links: Arxiv, PDF, Code, etc. -->
-            <div class="publication-links" style="margin-top: 1em;">
-              <!-- Arxiv PDF link -->
+            <!-- Links (ArXiv, GitHub, etc.) -->
+            <div class="publication-links" style="margin-top: 1.5em;">
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf"
-                   target="_blank"
+                <a href="https://arxiv.org/pdf/YOUR_ARXIV_PAPER_ID.pdf" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
-
-              <!-- Supplementary PDF link -->
               <span class="link-block">
-                <a href="static/pdfs/supplementary_material.pdf"
-                   target="_blank"
+                <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Supplementary</span>
                 </a>
               </span>
-
-              <!-- Github link -->
               <span class="link-block">
-                <a href="https://github.com/YOUR_REPO_HERE"
-                   target="_blank"
+                <a href="https://github.com/REPO_HERE" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
                 </a>
               </span>
-
-              <!-- ArXiv abstract Link -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/<ARXIV_PAPER_ID>"
-                   target="_blank"
+                <a href="https://arxiv.org/abs/YOUR_ARXIV_PAPER_ID" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div> <!-- column -->
+        </div> <!-- columns -->
+      </div> <!-- container -->
+    </div> <!-- hero-body -->
   </section>
 
   <!-- Abstract Section -->
@@ -128,26 +127,30 @@
             <p>
               Jailbreak attacks aim to exploit large language
               models (LLMs) and pose a significant threat to
-              their proper conduct; they seek to bypass mod-
-              els’ safeguards and often provoke transgressive
-              behaviors. However, existing automatic jailbreak
-              attacks require extensive computational resources
+              their proper conduct; they seek to bypass models’ safeguards
+              and often provoke transgressive behaviors. However, existing
+              automatic jailbreak attacks require extensive computational resources
               and are prone to converge on suboptimal solutions.
               In this work, we propose <strong>Compliance Refusal
               Initialization (CRI)</strong>, a novel, attack-agnostic
-              framework that efficiently initializes the optimiza-
-              tion in the proximity of the compliance subspace
+              framework that efficiently initializes the optimization
+              in the proximity of the compliance subspace
               of harmful prompts. By narrowing the initial gap
-              to the adversarial objective, CRI substantially im-
-              proves adversarial success rates (ASR) and dras-
-              tically reduces computational overhead—often
-              requiring just a single optimization step. We eval-
-              uate CRI on the widely-used AdvBench dataset
-              over the standard jailbreak attacks of GCG and
-              AutoDAN. Results show that CRI boosts ASR
+              to the adversarial objective, CRI substantially improves
+              adversarial success rates (ASR) and drastically
+              reduces computational overhead—often
+              requiring just a single optimization step. We evaluate
+              CRI on the widely-used <em>AdvBench</em> dataset
+              over the standard jailbreak attacks of <em>GCG</em> and
+              <em>AutoDAN</em>. Results show that CRI boosts ASR
               and decreases the median steps to success by up
-              to ×60. A reference implementation is publicly
-              available.
+              to <em>×60</em>.
+            </p>
+            <p>
+              We also tested the robustness of one of the DeepSeek models by running
+              the <strong>GCG jailbreak attack</strong> with CRI on the
+              <strong>HarmBench</strong> benchmark, demonstrating faster convergence
+              and high adversarial success.
             </p>
           </div>
         </div>
@@ -155,57 +158,124 @@
     </div>
   </section>
 
-  <!-- Introduction Section -->
-  <section class="section hero is-light" id="introduction">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">1. Introduction</h2>
-      <div class="content has-text-justified">
-        <p>
-          LLMs have recently emerged with extraordinary capabili-
-          ties (Waswani et al., 2017; Lewis et al., 2020; Ahn et al.,
-          2022; Hadi et al., 2023) and have rapidly become integral to
-          numerous fields, transforming everyday tasks such as text
-          generation (Touvron et al., 2023; Chiang et al., 2023; Jiang
-          et al., 2023; Achiam et al., 2023), image generation (Saharia
-          et al., 2022; Nichol et al., 2021), and complex decision-
-          making tasks (Topsakal & Akinci, 2023; Wu et al., 2023).
-          Despite their advantages, the widespread deployment of
-          LLMs has unveiled critical security vulnerabilities...
-        </p>
+  <!-- Introduction Section (optional; you can rename or remove if not needed) -->
+  <section class="section hero is-white">
+    <div class="container is-max-desktop content has-text-justified">
+      <h2 class="title is-3">Introduction</h2>
+      <p>
+        LLMs have recently emerged with extraordinary capabilities and have rapidly become integral to
+        numerous fields, transforming everyday tasks such as text generation, image generation, and complex
+        decision-making tasks. Despite their advantages, the widespread deployment of LLMs has unveiled
+        critical security vulnerabilities, making them susceptible to malicious misuse. A common strategy to
+        enhance the robustness of LLMs is alignment training, effectively separating the input space into
+        <em>Compliance</em> and <em>Refusal</em> subspaces. However, this segmentation has inadvertently
+        fueled adversarial jailbreak attacks that transform inputs to coerce models into providing unwanted
+        compliance outputs.
+      </p>
+      <p>
+        In our work, we leverage the distinction between refusal and compliance behaviors. By fine-tuning
+        the initialization of jailbreak prompts, we show that CRI can significantly enhance attack success rates
+        while reducing the computational overhead. Our experimental results indicate that the alignment process
+        itself may induce vulnerable directions in the latent representation of LLMs, which attackers can exploit.
+        Understanding and exposing these vulnerabilities is a crucial step toward developing more secure and
+        robust language models.
+      </p>
+      <p>
+        The remainder of this document details our CRI approach, experimental findings, and discussions on
+        broader impacts and ethical considerations.
+      </p>
+    </div>
+  </section>
 
-        <!-- ... Continue the rest of your introduction text here ... -->
+  <!-- Image / Framework Section -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title">Framework Overview</h2>
+        <figure class="image">
+          <!-- Replace with your actual path and image -->
+          <img src="static/images/framework_overview.png" alt="CRI Framework Overview">
+        </figure>
+        <p class="subtitle has-text-centered" style="margin-top: 1em;">
+          Figure: Illustration of CRI’s attack-agnostic initialization approach for jailbreaking.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Example Images (Framework and Main Results) -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Our Framework</h2>
-      <figure class="image is-4by3">
-        <!-- Replace the src path with the actual path to your framework image -->
-        <img src="static/images/framework.png" alt="Framework Image">
-      </figure>
+  <!-- Image / Results Section -->
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title">Main Results Visualization</h2>
+        <figure class="image">
+          <!-- Replace with your actual path and image -->
+          <img src="static/images/main_results.png" alt="Main Results Visualization">
+        </figure>
+        <p class="subtitle has-text-centered" style="margin-top: 1em;">
+          Figure: CRI significantly reduces the steps required to achieve jailbreak while boosting ASR.
+        </p>
+      </div>
     </div>
   </section>
 
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Main Results</h2>
-      <figure class="image is-4by3">
-        <!-- Replace the src path with the actual path to your main results image -->
-        <img src="static/images/main_results.png" alt="Main Results Image">
-      </figure>
-    </div>
-  </section>
-
-  <!-- Poster / PDF Section (Optional) -->
-  <section class="hero is-small is-light">
+  <!-- Poster / PDF Embed (Optional) -->
+  <section class="hero is-small is-white">
     <div class="hero-body">
       <div class="container">
         <h2 class="title">Poster</h2>
-        <!-- Sample PDF embedding -->
-        <iframe src="static/pdfs/sample.pdf" width
+        <!-- Example embedded PDF, update if you want to display a poster or a paper excerpt -->
+        <iframe src="static/pdfs/sample.pdf" width="100%" height="550"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX citation (Optional) -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+<pre><code>@misc{levi2025cri,
+  title       = {Enhancing Jailbreak Attacks via Compliance-Refusal-Based Initialization},
+  author      = {Levi, Amit and Himelstein, Rom and Nemcovsky, Yaniv and Mendelson, Avi and Baskin, Chaim},
+  year        = {2025},
+  howpublished= {Preprint},
+  url         = {https://arxiv.org/abs/YOUR_ARXIV_PAPER_ID}
+}
+</code></pre>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the 
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
+                Academic Project Page Template
+              </a> 
+              which was adopted from the 
+              <a href="https://nerfies.github.io" target="_blank">Nerfies</a> 
+              project page. You are free to borrow the source code of this website; we just ask that you link back 
+              to this page in the footer. <br>
+              This website is licensed under a 
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                Creative Commons Attribution-ShareAlike 4.0 International License
+              </a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- (Optional) Statcounter or other analytics can go here -->
+
+</body>
+</html>
+
 
 
 
