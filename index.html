@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,16 +152,16 @@
     </div>
   </section>
 
-  <!-- Refusal Compliance part (vRefusal) Section (Inserted After Abstract) -->
+  <!-- Refusal & Compliance Part vRefusal (AFTER ABSTRACT) -->
   <section class="section hero is-white">
     <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Refusal Compliance part (vRefusal)</h2>
-      <p>
-        Alignment training, which labels “good” or “bad” responses, effectively curbs harmful content yet
-        inadvertently enables “Universal jailbreaks attacks.” These gradient-based attacks exploit the
-        “minus refusal” direction—intended to enforce refusals—that overlaps with jailbreak embeddings.
-        This overlap both blocks harmful outputs and ironically guides adversaries around safety measures,
-        illustrating how alignment can expose critical vulnerabilities even as it protects.
+      <h2 class="title is-4">Refusal & Compliance Part vRefusal</h2>
+      <figure class="image">
+        <!-- Show the PDF as an embedded viewer or link -->
+        <embed src="static/images/harmful_prompt_embeddings_with_attacks (1).pdf" type="application/pdf" width="100%" height="600px" />
+      </figure>
+      <p class="subtitle has-text-centered" style="margin-top: 1em;">
+        Visualization highlighting the “minus refusal” direction and its overlapping jailbreak embeddings.
       </p>
     </div>
   </section>
@@ -196,41 +195,23 @@
     </div>
   </section>
 
-  <!-- Compliance-Refusal Figure (After Introduction) -->
-  <section class="section hero is-light is-small">
-    <div class="container is-max-desktop">
-      <h2 class="title">Compliance-Refusal Visualization</h2>
-      <figure class="image">
-        <!-- Updated PDF for compliance-refusal figure -->
-        <img src="static/images/harmful_prompt_embeddings_with_attacks (1).pdf" alt="Compliance-Refusal Visualization">
-      </figure>
-      <p class="subtitle has-text-centered" style="margin-top: 1em;">
-        A depiction of the compliance and refusal subspaces exploited by jailbreak attacks.
-      </p>
-    </div>
-  </section>
-
-  <!-- Framework Section with PDF -->
-  <section class="section hero is-white">
-    <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Framework</h2>
-      <p>
-        Our proposed CRI framework narrows the search space by initializing the optimization process
-        closer to the compliance subspace of harmful prompts. Below is a high-level overview diagram:
-      </p>
-      <figure class="image">
-        <img src="static/images/Framework.pdf" alt="Framework Overview">
-      </figure>
-      <p class="subtitle has-text-centered" style="margin-top: 1em;">
-        Figure: The CRI framework pipeline for gradient-based jailbreak attacks.
-      </p>
-    </div>
-  </section>
-
-  <!-- Fast LLM Jailbreak Section -->
+  <!-- Framework (AFTER INTRO) -->
   <section class="section hero is-light">
     <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Fast LLM Jailbreak Robustness Test with GCG + CRI (HarmBench In A Minutes)</h2>
+      <h2 class="title is-3">Framework</h2>
+      <figure class="image">
+        <embed src="static/images/Framework.pdf" type="application/pdf" width="100%" height="600px" />
+      </figure>
+      <p class="subtitle has-text-centered" style="margin-top: 1em;">
+        A high-level overview of our Compliance-Refusal-Based Initialization (CRI) process.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fast LLM Jailbreak Robustness Test -->
+  <section class="section hero is-white">
+    <div class="container is-max-desktop content has-text-justified">
+      <h2 class="title is-3">Fast LLM Jailbreak Robustness Test with GCG + CRI (HarmBench In A Minute)</h2>
       <p>
         To further demonstrate the effectiveness of CRI, we conducted a <strong>fast LLM jailbreak robustness test</strong>
         on one of the <strong>DeepSeek</strong> models using the <strong>GCG + CRI</strong> jailbreak attack on the 
@@ -262,63 +243,44 @@
     </div>
   </section>
 
-  <!-- Screenshot after Fast LLM Jailbreak Section -->
+  <!-- Screenshot after Fast LLM Jailbreak -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <h2 class="title">GCG + CRI in Action</h2>
+        <h2 class="title">GCG + CRI Prompt Example</h2>
         <figure class="image">
-          <img src="static/images/Screenshot 2025-02-14 at 1.00.03.png" alt="GCG + CRI Screenshot">
+          <img src="static/images/Screenshot 2025-02-14 at 1.00.03.png" alt="Fast Jailbreak Screenshot">
         </figure>
         <p class="subtitle has-text-centered" style="margin-top: 1em;">
-          Example screenshot demonstrating the speed and success of CRI-boosted jailbreak.
+          Sample CRI-initialized prompt leading to quicker jailbreak success.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Overall Results Section -->
-  <section class="section hero is-white">
+  <!-- Overall Results -->
+  <section class="section hero is-light">
     <div class="container is-max-desktop content has-text-justified">
       <h2 class="title is-3">Overall Results</h2>
       <p>
-        We present our overall CRI-boosted jailbreak results, highlighting the improved success rates and
-        reduced convergence steps across multiple benchmarks.
-      </p>
-      <figure class="image">
-        <img src="static/images/Screenshot 2025-02-14 at 1.03.54.png" alt="Overall Results Screenshot">
-      </figure>
-      <p class="subtitle has-text-centered" style="margin-top: 1em;">
-        A comprehensive look at the performance gains achieved with CRI.
+        We summarize our findings across multiple benchmarks, demonstrating that CRI consistently
+        reduces the optimization steps required to achieve a successful jailbreak while elevating the
+        adversarial success rates. These results reinforce the practical impact of CRI and emphasize
+        potential vulnerabilities in alignment-trained LLMs.
       </p>
     </div>
   </section>
 
-  <!-- (Original) Figure 3: Main Results Visualization -->
+  <!-- Screenshot after Overall Results -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <h2 class="title">Figure 3: Main Results Visualization</h2>
+        <h2 class="title">Consolidated Outcomes</h2>
         <figure class="image">
-          <img src="static/images/harmful_prompt_embeddings_with_attacks.pdf" alt="Comliance-Refusal">
+          <img src="static/images/Screenshot 2025-02-14 at 1.03.54.png" alt="Overall Results Screenshot">
         </figure>
         <p class="subtitle has-text-centered" style="margin-top: 1em;">
-          CRI significantly reduces the steps required to achieve jailbreak while boosting ASR.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- (Original) Figure 4: CRI Attack Results -->
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title">Figure 4: CRI Attack Results</h2>
-        <figure class="image">
-          <img src="static/images/results_cri.png" alt="Results CRI">
-        </figure>
-        <p class="subtitle has-text-centered" style="margin-top: 1em;">
-          Detailed performance metrics showing faster convergence and higher success rates with CRI.
+          Aggregated performance metrics showcasing CRI’s efficacy across various scenarios.
         </p>
       </div>
     </div>
@@ -365,8 +327,7 @@
     </div>
   </footer>
 
-  <!-- (Optional) Statcounter or other analytics can go here -->
+  <!-- (Optional) Analytics scripts can go here -->
 
 </body>
 </html>
-```
