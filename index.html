@@ -190,18 +190,13 @@
   <!-- New Section: Fast LLM Jailbreak Robustness Test -->
   <section class="section hero is-light">
     <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Fast LLM Jailbreak Robustness Test with GCG + CRI</h2>
+      <h2 class="title is-3">Fast LLM Jailbreak Robustness Test with GCG + CRI (HarmBench In A Minutes) </h2>
       <p>
-        To further demonstrate the effectiveness of CRI, we conducted a fast LLM jailbreak robustness test 
-        on one of the <strong>DeepSeek</strong> models using the <strong>GCG</strong> jailbreak attack on the 
+        To further demonstrate the effectiveness of CRI, we conducted a <strong>fast LLM jailbreak robustness test</strong>
+        on one of the <strong>DeepSeek</strong> models using the <strong>GCG + CRI </strong> jailbreak attack on the 
         <strong>HarmBench</strong> benchmark. Below is an overview of how we set up and ran our experiments:
       </p>
       <ol>
-        <li>
-          <strong>Environment Setup:</strong> We prepared the HarmBench dataset 
-          and the DeepSeek model environment. Ensuring correct dependencies and GPU availability 
-          is critical for efficient batched inference.
-        </li>
         <li>
           <strong>Applying CRI:</strong> Before launching the jailbreak attack, we generated a 
           set of CRI-based initial transformations. These transformations were pre-trained once 
@@ -222,10 +217,7 @@
         </li>
       </ol>
       <p>
-        Our results demonstrated that, even under challenging conditions, CRI-augmented GCG maintained 
-        a high success rate against the DeepSeek model on HarmBench, requiring fewer steps 
-        on average to achieve a jailbreak. This underscores CRI’s potential for fast, systematic 
-        robustness evaluation in future LLM security research.
+        This underscores CRI’s potential for fast, systematic robustness evaluation in future LLM security research.
       </p>
     </div>
   </section>
