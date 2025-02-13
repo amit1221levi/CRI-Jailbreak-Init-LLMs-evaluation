@@ -158,7 +158,7 @@
     </div>
   </section>
 
-  <!-- Introduction Section (optional; you can rename or remove if not needed) -->
+  <!-- Introduction Section -->
   <section class="section hero is-white">
     <div class="container is-max-desktop content has-text-justified">
       <h2 class="title is-3">Introduction</h2>
@@ -183,6 +183,49 @@
       <p>
         The remainder of this document details our CRI approach, experimental findings, and discussions on
         broader impacts and ethical considerations.
+      </p>
+    </div>
+  </section>
+
+  <!-- New Section: Fast LLM Jailbreak Robustness Test -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop content has-text-justified">
+      <h2 class="title is-3">Fast LLM Jailbreak Robustness Test with GCG + CRI</h2>
+      <p>
+        To further demonstrate the effectiveness of CRI, we conducted a fast LLM jailbreak robustness test 
+        on one of the <strong>DeepSeek</strong> models using the <strong>GCG</strong> jailbreak attack on the 
+        <strong>HarmBench</strong> benchmark. Below is an overview of how we set up and ran our experiments:
+      </p>
+      <ol>
+        <li>
+          <strong>Environment Setup:</strong> We prepared the HarmBench dataset 
+          and the DeepSeek model environment. Ensuring correct dependencies and GPU availability 
+          is critical for efficient batched inference.
+        </li>
+        <li>
+          <strong>Applying CRI:</strong> Before launching the jailbreak attack, we generated a 
+          set of CRI-based initial transformations. These transformations were pre-trained once 
+          (using a few samples from HarmBench), aiming to place the prompts closer to the 
+          <em>compliance subspace</em>.
+        </li>
+        <li>
+          <strong>Running the GCG Attack:</strong> We then ran GCG with the CRI-initialized prompts. 
+          GCG iteratively refines the prompt by leveraging gradient signals. Due to the more 
+          informative starting point from CRI, GCG converged more quickly toward successful jailbreaks, 
+          reducing total optimization steps.
+        </li>
+        <li>
+          <strong>Measuring Robustness:</strong> We measured adversarial success rates (ASR), 
+          the number of steps to success, and overall computational overhead. The DeepSeek model exhibited 
+          faster convergence to harmful completions compared to standard or random initializations, 
+          highlighting CRI’s efficiency.
+        </li>
+      </ol>
+      <p>
+        Our results demonstrated that, even under challenging conditions, CRI-augmented GCG maintained 
+        a high success rate against the DeepSeek model on HarmBench, requiring fewer steps 
+        on average to achieve a jailbreak. This underscores CRI’s potential for fast, systematic 
+        robustness evaluation in future LLM security research.
       </p>
     </div>
   </section>
@@ -275,7 +318,6 @@
 
 </body>
 </html>
-
 
 
 
