@@ -101,211 +101,57 @@
     </div> <!-- hero-body -->
   </section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Abstract</h2>
-                <div class="content has-text-justified">
-                    <p>
-                        Safety-aligned LLMs respond to prompts with either compliance or refusal, each corresponding to distinct directions in the model’s activation space.
-                        Recent works show that initializing attacks via self-transfer from other prompts significantly enhances their performance.
-                        However, the underlying mechanisms of these initializations remain unclear, and attacks utilize arbitrary or hand-picked initializations.
-                        This work presents that each gradient-based jailbreak attack and subsequent initialization gradually converge to a single compliance direction that suppresses refusal, thereby enabling an efficient transition from refusal to compliance.
-                        Based on this insight, we propose CRI, an initialization framework that aims to project unseen prompts further along compliance directions.
-                        We demonstrate our approach on multiple attacks, models, and datasets, achieving an increased attack success rate (ASR) and reduced computational overhead, highlighting the fragility of safety-aligned LLMs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End paper abstract -->
-
-  
-
-
-  <!-- Image carousel -->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container">
-            <div class="carousel results-carousel" id="results-carousel">
-                <div class="item" style="text-align: center;">
-                    <!-- Your image here -->
-                    <img alt="Motivation" src="static/images/nips_harmful_prompt_embeddings.jpg"/>
-                    <h2 class="subtitle has-text-centered">
-                        Motivation
-                    </h2>
-                </div>
-                <div class="item" style="text-align: center;">
-                    <!-- Your image here -->
-                    <img alt="Motivation" src="static/images/LFS.jpg"/>
-                    <h2 class="subtitle has-text-centered">
-                        LFS
-                    </h2>
-                </div>
-              
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End image carousel -->
-  
-
-  <!-- Introduction Section -->
-  <section class="section hero is-white">
-    <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Introduction</h2>
-      <p>
-        LLMs have recently emerged with extraordinary capabilities and have rapidly become integral to
-        numerous fields, transforming everyday tasks such as text generation, image generation, and complex
-        decision-making tasks. Despite their advantages, the widespread deployment of LLMs has unveiled
-        critical security vulnerabilities, making them susceptible to malicious misuse. A common strategy to
-        enhance the robustness of LLMs is alignment training, effectively separating the input space into
-        <em>Compliance</em> and <em>Refusal</em> subspaces. However, this segmentation has inadvertently
-        fueled adversarial jailbreak attacks that transform inputs to coerce models into providing unwanted
-        compliance outputs.
-      </p>
-      <p>
-        In our work, we leverage the distinction between refusal and compliance behaviors. By fine-tuning
-        the initialization of jailbreak prompts, we show that CRI can significantly enhance attack success rates
-        while reducing the computational overhead. Our experimental results indicate that the alignment process
-        itself may induce vulnerable directions in the latent representation of LLMs, which attackers can exploit.
-        Understanding and exposing these vulnerabilities is a crucial step toward developing more secure and
-        robust language models.
-      </p>
-      <p>
-        The remainder of this document details our CRI approach, experimental findings, and discussions on
-        broader impacts and ethical considerations.
-      </p>
-    </div>
-  </section>
-
-  <!-- Framework (AFTER INTRO) -->
+  <!-- Paper abstract -->
   <section class="section hero is-light">
-    <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Framework</h2>
-      <figure class="image">
-        <img src="static/images/framework.png" alt="CRI Framework Overview">
-      </figure>
-      <p class="subtitle has-text-centered" style="margin-top: 1em;">
-        A high-level overview of our Compliance-Refusal-Based Initialization (CRI) process.
-      </p>
-    </div>
-  </section>
-
-  <!-- Overall Results -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Overall Results</h2>
-      <p>
-        We summarize our findings across AdvBench, demonstrating that CRI consistently
-        reduces the optimization steps required to achieve a successful jailbreak while elevating the
-        adversarial success rates. These results reinforce the practical impact of CRI and emphasize
-        potential vulnerabilities in alignment-trained LLMs.
-      </p>
-    </div>
-  </section>
-
-  <!-- Screenshot after Overall Results -->
-  <section class="hero is-small">
-    <div class="hero-body">
       <div class="container is-max-desktop">
-        <h2 class="title"></h2>
-        <figure class="image">
-          <img src="static/images/Screenshot 2025-02-14 at 1.03.54.png" alt="Overall Results Screenshot">
-        </figure>
-        <p class="subtitle has-text-centered" style="margin-top: 1em;">
-          Aggregated performance metrics showcasing CRI’s efficacy across various scenarios.
-        </p>
+          <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                  <h2 class="title is-3">Abstract</h2>
+                  <div class="content has-text-justified">
+                      <p>
+                          Safety-aligned LLMs respond to prompts with either compliance or refusal, each corresponding to distinct directions in the model’s activation space.
+                          Recent works show that initializing attacks via self-transfer from other prompts significantly enhances their performance.
+                          However, the underlying mechanisms of these initializations remain unclear, and attacks utilize arbitrary or hand-picked initializations.
+                          This work presents that each gradient-based jailbreak attack and subsequent initialization gradually converge to a single compliance direction that suppresses refusal, thereby enabling an efficient transition from refusal to compliance.
+                          Based on this insight, we propose CRI, an initialization framework that aims to project unseen prompts further along compliance directions.
+                          We demonstrate our approach on multiple attacks, models, and datasets, achieving an increased attack success rate (ASR) and reduced computational overhead, highlighting the fragility of safety-aligned LLMs.
+                      </p>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
   </section>
-
-
-      <!-- Screenshot after Overall Results -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title"></h2>
-        <figure class="image">
-          <img src="static/images/asr.png" alt="Overall Results Screenshot">
-        </figure>
-        <p class="subtitle has-text-centered" style="margin-top: 1em;">
-          ASR to steps.
-        </p>
-      </div>
-    </div>
-  </section>
-
+  <!-- End paper abstract -->
   
-    <!-- Screenshot after Overall Results -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title"></h2>
-        <figure class="image">
-          <img src="static/images/Loss.png" alt="Overall Results Screenshot">
-        </figure>
-        <p class="subtitle has-text-centered" style="margin-top: 1em;">
-          Loss to steps.
-        </p>
-      </div>
-    </div>
-  </section>
+    
   
-
-  <!-- Fast LLM Jailbreak Robustness Test (Moved After Results) -->
-  <section class="section hero is-white">
-    <div class="container is-max-desktop content has-text-justified">
-      <h2 class="title is-3">Fast LLM Jailbreak Robustness Test with GCG + CRI (HarmBench in minutes)</h2>
-      <p>
-        To further demonstrate the effectiveness of CRI, we conducted a <strong>fast LLM jailbreak robustness test</strong>
-        on one of the <strong>DeepSeek</strong> models using the <strong>GCG + CRI</strong> jailbreak attack on the 
-        <strong>HarmBench</strong> benchmark. Below is an overview of how we set up and ran our experiments:
-      </p>
-      <ol>
-        <li>
-          <strong>Applying CRI:</strong> Before launching the jailbreak attack, we generated a 
-          set of CRI-based initial transformations. These transformations were pre-trained once 
-          (using a few samples from HarmBench), aiming to place the prompts closer to the 
-          <em>compliance subspace</em>.
-        </li>
-        <li>
-          <strong>Running the GCG Attack:</strong> We then ran GCG with the CRI-initialized prompts. 
-          GCG iteratively refines the prompt by leveraging gradient signals. Due to the more 
-          informative starting point from CRI, GCG converged more quickly toward successful jailbreaks, 
-          reducing total optimization steps.
-        </li>
-        <li>
-          <strong>Measuring Robustness:</strong> We measured adversarial success rates (ASR), 
-          the number of steps to success, and overall computational overhead. We demonstrate this Adversarial test on DeepSeek model, using CRI(ours) init exhibited 
-          faster convergence to harmful completions compared to standard or random initializations, 
-          highlighting CRI’s efficiency.
-        </li>
-      </ol>
-      <p>
-        This underscores CRI’s potential for fast, systematic robustness evaluation in future LLM security research.
-      </p>
-    </div>
-  </section>
-
-  <!-- Screenshot after Fast LLM Jailbreak -->
+  
+    <!-- Image carousel -->
   <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title">AutoDan + CRI +  Prompt Injection(target) </h2>
-        <figure class="image">
-          <img src="static/images/Screenshot 2025-02-14 at 1.00.03.png" alt="Fast Jailbreak Screenshot">
-        </figure>
-        <p class="subtitle has-text-centered" style="margin-top: 1em;">
-          Example for Jailbreak output
-        </p>
+      <div class="hero-body">
+          <div class="container">
+              <div class="carousel results-carousel" id="results-carousel">
+                  <div class="item" style="text-align: center;">
+                      <!-- Your image here -->
+                      <img alt="Motivation" src="static/images/nips_harmful_prompt_embeddings.jpg"/>
+                      <h2 class="subtitle has-text-centered">
+                          Motivation
+                      </h2>
+                  </div>
+                  <div class="item" style="text-align: center;">
+                      <!-- Your image here -->
+                      <img alt="Motivation" src="static/images/LFS.jpg"/>
+                      <h2 class="subtitle has-text-centered">
+                          LFS
+                      </h2>
+                  </div>
+                
+              </div>
+          </div>
       </div>
-    </div>
   </section>
-
+  <!-- End image carousel -->
+  
   <!-- BibTeX citation (Optional) -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
