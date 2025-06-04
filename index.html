@@ -100,8 +100,31 @@
         </div> <!-- columns -->
     </div> <!-- hero-body -->
   </section>
-    
-  <!-- Abstract Section -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Safety-aligned LLMs respond to prompts with either compliance or refusal, each corresponding to distinct directions in the model’s activation space.
+                        Recent works show that initializing attacks via self-transfer from other prompts significantly enhances their performance.
+                        However, the underlying mechanisms of these initializations remain unclear, and attacks utilize arbitrary or hand-picked initializations.
+                        This work presents that each gradient-based jailbreak attack and subsequent initialization gradually converge to a single compliance direction that suppresses refusal, thereby enabling an efficient transition from refusal to compliance.
+                        Based on this insight, we propose CRI, an initialization framework that aims to project unseen prompts further along compliance directions.
+                        We demonstrate our approach on multiple attacks, models, and datasets, achieving an increased attack success rate (ASR) and reduced computational overhead, highlighting the fragility of safety-aligned LLMs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End paper abstract -->
+
+  
+<!--   <!-- Abstract Section -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -118,7 +141,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Refusal & Compliance (AFTER ABSTRACT) -->
 <section class="section hero is-white">
